@@ -20,12 +20,12 @@ nav {
     font-size: smaller;
 
     /*Glass Panel*/
-    background: rgba( 0, 0, 0, 0.7 );
+    background: rgba( 255, 255, 255, 0.7 );
     background-size: 10px;
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 12px );
     border: 0.5px solid rgba( 255, 255, 255, 0.28 );
-    box-shadow: 0px 0px 10px 1px rgba(58, 50, 29, 0.11);
+    box-shadow: 0px 0px 1px 1px rgba(58, 50, 29, 0.11);
 }
 
 .nav-links{
@@ -40,28 +40,32 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: lightgray;
+    /* color: lightgray; */
+    color: black;
     padding: 15px;
 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .nav-links a:hover{
-    color: white;
+    /* color: white; */
+    color: lightgray;
 
-    transition: all 0.5s ease-in-out;
+    transition: all 0.2s ease-in-out;
 }
 
 .logo {
     font-weight: bold;
-    color: lightgray;
+    /* color: lightgray; */
+    color: black;
 }
 
 .cart {
     /* font-weight: bold; */
     list-style: none;
     text-decoration: none;
-    color: lightgray;
+    /* color: lightgray; */
+    color: black;
     padding-inline: 12px;
     padding-top: 14px;
     padding-bottom: 14px;
@@ -70,7 +74,8 @@ nav {
 }
 
 .cart:hover {
-    color: white;
+    /* color: white; */
+    color: lightgray;
 
     transition: all 0.2s ease-in-out;
 }
