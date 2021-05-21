@@ -5,6 +5,7 @@
     font-family: Helvetica;
 }
 
+/*NavBar starts here...*/
 nav {
     position: fixed;
     width: 100%;
@@ -36,7 +37,6 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    /* color: lightgray; */
     color: black;
     padding: 15px;
 
@@ -44,7 +44,6 @@ nav {
 }
 
 .nav-links a:hover{
-    /* color: white; */
     color: lightgray;
 
     transition: all 0.2s ease-in-out;
@@ -53,21 +52,28 @@ nav {
 .logo img{
     width: 30px;
     height: 30px;
-    clip-path: circle();
+    border-radius: 15px;
+    transition: all 0.25s ease-in-out;
+}
+.logo {
+    padding-inline: 9.5px;
+}
+
+.logo img:hover {
+    box-shadow: 0px 0px 8px 1px rgba(58, 50, 29, 0.1);
+    transform: scale(1.23);
+    transition: all 0.25s ease-in-out;
 }
 
 .logo a{
-    padding-inline: 9.5px;
     display: flex;
 }
 
 .cart {
-    /* font-weight: bold; */
     list-style: none;
     text-decoration: none;
-    /* color: lightgray; */
     color: black;
-    padding-inline: 12px;
+    padding-inline: 19px;
     padding-top: 14px;
     padding-bottom: 14px;
 
@@ -75,11 +81,11 @@ nav {
 }
 
 .cart:hover {
-    /* color: white; */
     color: lightgray;
 
     transition: all 0.2s ease-in-out;
 }
+/*NavBar ends here...*/
 
 h1, h3 {
     display: table;
