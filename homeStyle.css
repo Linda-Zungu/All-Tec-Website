@@ -21,7 +21,7 @@ nav {
     background-size: 10px;
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 12px );
-    border: 0.5px solid rgba( 255, 255, 255, 0.98 );/*0.28*/
+    border: 0.5px solid rgba( 255, 255, 255, 0.38 );/*0.28*/
     box-shadow: 0px 0px 1px 1px rgba(58, 50, 29, 0.11);
 }
 
@@ -92,11 +92,43 @@ h1, h3 {
     margin: 0 auto;
     font-size: 300%;
     
-    padding-top: 70px;
+    padding-top: 100px;
 }
 
 h3 {
     font-size: larger;
     font-weight: lighter;
     padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.paymentMethods {
+    background-color: black;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.paymentMethods h1, .paymentMethods h2{
+    display: table;
+    margin: 0 auto;
+    text-align: center;
+
+    padding: 40px;
+}
+.paymentMethods h2 {
+    padding: 25px;
+    font-weight: lighter;
+}
+.paymentMethods ul {
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
+    align-self: center;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+.paymentMethods li {
+    padding: 50px;
 }
