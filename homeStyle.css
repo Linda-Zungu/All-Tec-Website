@@ -56,7 +56,7 @@ nav {
     clip-path: circle();
 }
 
-.logo {
+.logo a{
     padding-inline: 9.5px;
     display: flex;
 }
