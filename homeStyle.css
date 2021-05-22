@@ -112,24 +112,39 @@ h3 {
     padding-bottom: 40px;
 }
 
+.computerScience {
+    
+}
 .computerScience img{
     display: table;
     margin: 0 auto;
-    margin-bottom: 10px;
-    width: 78%;
+    width: 88%;
     height: 100%;
-
-    border-radius: 10px;
+    padding: 20px;
+    border-radius: 30px;
 }
 
-.centeredText {
+.comSciPicText {
     position: absolute;
     top: 90%;
     left: 50%;
-    color: red;
+    color: white;
     font-weight: bolder;
-    transform: translate(-50%, -50%);
+    text-transform: capitalize;
+    transform: translate(-50%, -40%);
+    text-align: center;
     opacity: 0;
+
+    /*Glass Panel*/
+    background: rgba( 0, 0, 0, 0.4 );
+    background-size: 10px;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 6px );
+    border: 0.5px solid rgba( 255, 255, 255, 0.40 );/*0.28*/
+    box-shadow: 0px 25px 30px 5px rgba(0, 0, 0, 0.4);
+
+    padding: 30px;
+    border-radius: 10px;
 }
 
 .paymentMethods {
