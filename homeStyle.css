@@ -7,6 +7,7 @@
 
 /*NavBar starts here...*/
 nav {
+    z-index: 1;
     position: fixed;
     width: 100%;
     display: flex;
@@ -119,6 +120,16 @@ h3 {
     height: 100%;
 
     border-radius: 10px;
+}
+
+.centeredText {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    color: red;
+    font-weight: bolder;
+    transform: translate(-50%, -50%);
+    opacity: 0;
 }
 
 .paymentMethods {
