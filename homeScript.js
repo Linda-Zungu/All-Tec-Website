@@ -3,11 +3,11 @@ function checkScrollPosition(){
     console.log(scroll);
 
     let comSciPic = document.getElementById("comsci");
-    document.getElementById("centeredtext").style.opacity = ""+scroll/200;
+    document.getElementById("comscipicText").style.opacity = ""+scroll/300;
     
-    if(scroll < 150){
-        comSciPic.style.filter = "blur("+scroll/20+"px)";
-    }
+    // if(scroll < 150){
+    //     comSciPic.style.filter = "blur("+scroll/25+"px)";
+    // }
     
 }
 
