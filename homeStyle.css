@@ -157,6 +157,7 @@ h3 {
     align-self: center;
     justify-items: center;
     flex-wrap: wrap;
+    padding-bottom: 30px;
 }
 
 .courseImages li {
@@ -216,6 +217,7 @@ h3 {
 
 .swiftPic {
     width: 30%;
+    padding-top: 10px;
     padding-bottom: 20px;
 }
 
@@ -259,4 +261,34 @@ h3 {
 
 .paymentMethods li {
     padding: 50px;
+}
+
+
+/* The Footer */
+hr {
+    display: table;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-top: 0.5px solid lightgrey;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.footerLinks {
+    display: table;
+    margin: 0 auto;
+}
+.footerLinks ul{
+    display: flex;
+    margin: 0 auto;
+    list-style: none;
+    padding-top: 20px;
+    color: gray;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.footerLinks ul li {
+    padding-inline: 60px;
+    padding-bottom: 20px;
 }
