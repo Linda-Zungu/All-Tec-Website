@@ -7,7 +7,7 @@
 
 /*NavBar starts here...*/
 nav {
-    z-index: 1;
+    z-index: 2;
     position: fixed;
     width: 100%;
     display: flex;
@@ -87,6 +87,45 @@ nav {
     color: darkgray;
 
     transition: all 0.2s ease-in-out;
+}
+
+.courseIconLinks {
+    z-index: 1;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: space-around;
+    /* margin-top: 44px; */
+    opacity: 0;
+    min-height: 6vh;
+    align-items: center;
+    position: fixed;
+
+    /*Glass Panel*/
+    background: rgba( 255, 255, 255, 0.7 );
+    background-size: 10px;
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-bottom: 0.5px solid rgba( 0, 0, 0, 0.0 );
+    /* box-shadow: 0px 1px 0.1px 0px rgba(58, 50, 29, 0.11); */
+}
+.courseIconLinks ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    width: 50%;
+}
+
+@keyframes moveIconLinks {
+    from {
+        opacity: 0;
+        transform: translateY(0px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(44px);
+    }
 }
 /*NavBar ends here...*/
 
