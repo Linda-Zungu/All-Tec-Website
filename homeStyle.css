@@ -18,11 +18,11 @@ nav {
     font-size: small;
 
     /*Glass Panel*/
-    background: rgba( 0, 0, 0, 0.7 );
+    background: rgba( 255, 255, 255, 0.7 );
     background-size: 10px;
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 12px );
-    border: 0.5px solid rgba( 0, 0, 0, 0.0 );
+    border-bottom: 0.5px solid rgba( 0, 0, 0, 0.0 );
     box-shadow: 0px 0px 1px 1px rgba(58, 50, 29, 0.11);
 }
 
@@ -38,7 +38,8 @@ nav {
 
 .nav-links a {
     text-decoration: none;
-    color: white;
+    /* color: white; */
+    color: black;
     padding: 15px;
 
     transition: all 0.2s ease-in-out;
@@ -73,7 +74,8 @@ nav {
 .cart {
     list-style: none;
     text-decoration: none;
-    color: white;
+    /* color: white; */
+    color: black;
     padding-inline: 19px;
     padding-top: 14px;
     padding-bottom: 14px;
@@ -268,27 +270,37 @@ h3 {
 hr {
     display: table;
     margin: 0 auto;
-    margin-top: 20px;
-    border-top: 0.5px solid lightgrey;
+    border: 0.1px solid grey;
     border-radius: 10px;
     width: 90%;
 }
 
-.footerLinks {
-    display: table;
-    margin: 0 auto;
-}
 .footerLinks ul{
     display: flex;
-    margin: 0 auto;
     list-style: none;
-    padding-top: 20px;
-    color: gray;
+    padding-top: 30px;
     justify-content: center;
+    justify-items: center;
+    text-align: center;
     flex-wrap: wrap;
 }
 
 .footerLinks ul li {
     padding-inline: 60px;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    font-weight: lighter;
+    font-size: small;
+    text-align: center;
 }
+
+.footerLinks a {
+    text-decoration: none;
+    color: grey;
+    transition: all 0.2s ease-in-out;
+}
+
+.footerLinks a:hover {
+    color: white;
+    transition: all 0.2s ease-in-out;
+}
+/* The Footer ends here */
