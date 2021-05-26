@@ -120,6 +120,14 @@ nav {
     width: 50%;
 }
 
+.courseIconLinks a {
+    color: white;
+}
+
+.courseIconLinks a:hover {
+    color: darkgray;
+}
+
 @keyframes moveIconLinks {
     from {
         opacity: 0;
