@@ -23,3 +23,63 @@ courseLinkNav.addEventListener("mouseout", function (){
     courseLinkNav.style.opacity = "0"
     courseLinkNav.style.transition = "all 0.3s ease-in-out"
 })
+
+window.addEventListener("scroll", function () {
+    let scroll = this.scrollY;
+    let nav = document.getElementById("navBarID")
+    let aboutTab = document.getElementById("aboutID")
+    let coursesTab = document.getElementById("coursesID")
+    let contactTab = document.getElementById("contactID")
+    let cartTab = document.getElementById("cartID")
+    let courseLinkNav = document.getElementById("courseIconID")
+
+    
+    nav.style.background = scroll >=485 ? "rgba( 255, 255, 255, 0.7 )" : "rgba( 0, 0, 0, 0.7 )"
+    nav.style.transition = "all 0.3s ease-in-out"
+    
+    function switchColorsTab(tab) {
+        let scroll = this.scrollY;
+        tab.addEventListener("mousemove", function () {
+            tab.style.color = "gray"
+        })
+        tab.addEventListener("mouseout", function () {
+            tab.style.color = scroll >=485 ? "black" : "white"
+        })
+    }
+
+    switchColorsTab(aboutTab)
+    switchColorsTab(coursesTab)
+    switchColorsTab(contactTab)
+    switchColorsTab(cartTab)
+
+    aboutTab.style.color = scroll >=485 ? "black" : "white"
+    coursesTab.style.color = scroll >=485 ? "black" : "white"
+    contactTab.style.color = scroll >=485 ? "black" : "white"
+    cartTab.style.color = scroll >=485 ? "black" : "white"
+    courseLinkNav.style.background = scroll >= 485 ? "rgba( 255, 255, 255, 0.7 )" : "rgba( 0, 0, 0, 0.7 )"
+    courseLinkNav.style.transition = "all 0.3s ease-in-out"
+    
+    function switchColorsIcons(icon) {
+        let scroll = this.scrollY;
+        document.getElementById(""+icon).addEventListener("mouseout", function () {
+            document.getElementById(""+icon).style.color = scroll >=485 ? "black" : "white"
+        })
+        document.getElementById(""+icon).addEventListener("mousemove", function () {
+            document.getElementById(""+icon).style.color = "gray"
+            document.getElementById(""+icon).style.transition = "all 0.0s ease-in-out"
+        })
+        document.getElementById(""+icon).style.color = scroll >=485 ? "black" : "white"
+        document.getElementById(""+icon).style.transition = "all 0.3s ease-in-out"
+    }
+
+    switchColorsIcons("iconID1");
+    switchColorsIcons("iconID2");
+    switchColorsIcons("iconID3");
+    switchColorsIcons("iconID4");
+    switchColorsIcons("iconID5");
+    switchColorsIcons("iconID6");
+    switchColorsIcons("iconID7");
+})
+
+
+
