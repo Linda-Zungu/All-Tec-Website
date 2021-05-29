@@ -157,16 +157,71 @@ h1 {
 .subheadlines {
     padding-top: 50px;
 }
-h3 {
+h3, h4 {
     display: table;
     margin: 0 auto;
     color: grey;
     font-weight: lighter;
 }
 
+h4 {
+    color: black;
+    padding-bottom: 10px;
+}
+
+.socials ul{
+    padding-top: 20px;
+    display: flex;
+    list-style: none;
+    justify-self: center;
+    justify-content: center;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+
+.socials li {
+    font-size: 35px;
+    padding: 30px;
+    padding-inline: 50px;
+    transition: all 0.3s ease-in-out;
+}
+
+.socials li:hover {
+    transform: scale(1.2, 1.2);
+    
+}
+
+.socials a{
+    color: black;   
+    padding: 30px; 
+}
+
+.socials a:hover {
+    transition: all 0.3s ease-in-out;
+}
+
+#insta {
+    transform: scale(1.2, 1.2);
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#face {
+    transform: scale(1.2, 1.2);
+    color: #3B5998;
+}
+
+#twit {
+    transform: scale(1.2, 1.2);
+    color: #00ACEE;
+}
+
 hr {
     display: table;
     margin: 0 auto;
+    margin-top: 50px;
     width: 80%;
     background-color: lightgrey;
     border: 0.1px solid lightgray;
@@ -188,7 +243,7 @@ hr {
 }
 
 input, textarea {
-    width: 250px;
+    width: 350px;
     border-radius: 5px;
     padding: 10px;
     border-style: none;
