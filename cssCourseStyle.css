@@ -225,7 +225,7 @@ h1 {
     width: 300px;
 }
 
-.text a {
+.text button {
     padding: 10px;
     border-radius: 10px;
     border: none;
@@ -236,7 +236,7 @@ h1 {
     font-weight: 300;
 }
 
-.text a:hover {
+.text button:hover {
     background-color: rgb(56, 155, 255);
 }
 
