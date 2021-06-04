@@ -27,6 +27,7 @@ courseLinkNav.addEventListener("mouseout", function (){
 window.addEventListener("scroll", function () {
     let scroll = this.scrollY;
     let nav = document.getElementById("navBarID")
+    let miniCart = document.getElementById("miniCartID");
     let aboutTab = document.getElementById("aboutID")
     let coursesTab = document.getElementById("coursesID")
     let contactTab = document.getElementById("contactID")
@@ -36,6 +37,10 @@ window.addEventListener("scroll", function () {
     
     nav.style.background = scroll >=485 ? "rgba( 255, 255, 255, 0.7 )" : "rgba( 0, 0, 0, 0.7 )"
     nav.style.transition = "all 0.3s ease-in-out"
+
+    miniCart.style.background = scroll >=485 ? "rgba( 255, 255, 255, 0.7 )" : "rgba( 0, 0, 0, 0.7 )"
+    miniCart.style.borderLeft = scroll >=485 ? "0.5px solid rgba( 255, 255, 255, 0.9 )" : "0.5px solid rgba( 255, 255, 255, 0.2 )"
+    miniCart.style.color = scroll >=485 ? "black" : "lightgray"
     
     function switchColorsTab(tab) {
         let scroll = this.scrollY;
