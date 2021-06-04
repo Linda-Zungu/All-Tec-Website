@@ -81,5 +81,39 @@ window.addEventListener("scroll", function () {
     switchColorsIcons("iconID7");
 })
 
+function cartFunc() {
+    var miniCart = document.getElementById("miniCartID");
+    miniCart.style.animation = "moveMiniCart 0.3s ease-in-out"
+    if(miniCart.style.transform == "translateX(0%)"){
+        miniCart.style.transform = "translateX(150%)"
+        document.getElementById('miniCartID').innerHTML = '';
+    }
+    else{
+        miniCart.style.transform = "translateX(0%)"
+        if(items != null) {
+            items.forEach(i => {
+                addToTray(i);
+            });
+        }
+    } 
+}
+
+var items = [];
+items = JSON.parse(localStorage.getItem('items')) || [];
+function storeText(nameID) {
+    items.push(document.getElementById(nameID).innerHTML)
+    localStorage.setItem('items', JSON.stringify(items));
+    addToTray(items[items.length-1])
+}
+
+function addToTray(nameID) {
+    var ul = document.getElementById('miniCartID');
+    var li = document.createElement("li");
+    var hr = document.createElement("hr");
+
+    li.appendChild(document.createTextNode(nameID));
+    ul.appendChild(li);
+    ul.appendChild(hr);
+}
 
 
