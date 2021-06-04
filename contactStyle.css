@@ -176,6 +176,14 @@ nav {
     
 }
 
+.miniCart hr {
+    display: table;
+    margin: 0 auto;
+    width: 90%;
+    background-color: lightgrey;
+    border: 0.1px solid lightgray;
+}
+
 @keyframes moveMiniCart {
     from {
         transform: translateX(150%);
