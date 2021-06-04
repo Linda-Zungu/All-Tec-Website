@@ -172,7 +172,8 @@ nav {
     padding: 20px;
     font-weight: lighter;
     font-size: 13px;
-    
+    display: flex;
+    justify-content: space-between;
 }
 
 .miniCart hr {

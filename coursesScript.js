@@ -35,26 +35,37 @@ function cartFunc() {
         miniCart.style.transform = "translateX(0%)"
         if(items != null) {
             items.forEach(i => {
-                addToTray(i);
+                addToTray(i, itemPrices[items.indexOf(i)]);
             });
         }
     } 
 }
 
 var items = [];
+var itemPrices = [];
 items = JSON.parse(localStorage.getItem('items')) || [];
-function storeText(nameID) {
+itemPrices = JSON.parse(localStorage.getItem('itemPrices')) || [];
+
+function storeText(nameID, priceID) {
     items.push(document.getElementById(nameID).innerHTML)
     localStorage.setItem('items', JSON.stringify(items));
-    addToTray(items[items.length-1])
+
+    itemPrices.push(document.getElementById(priceID).innerHTML)
+    localStorage.setItem('itemPrices', JSON.stringify(itemPrices))
+
+    addToTray(items[items.length-1], itemPrices[itemPrices.length-1])
 }
 
-function addToTray(nameID) {
+function addToTray(nameID, priceID) {
     var ul = document.getElementById('miniCartID');
     var li = document.createElement("li");
     var hr = document.createElement("hr");
+    var p = document.createElement("p");
 
+    console.log(priceID)
     li.appendChild(document.createTextNode(nameID));
+    p.appendChild(document.createTextNode(priceID));
     ul.appendChild(li);
+    li.appendChild(p)
     ul.appendChild(hr);
 }

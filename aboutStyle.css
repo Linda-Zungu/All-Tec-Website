@@ -177,6 +177,13 @@ nav {
     font-weight: lighter;
     font-size: 13px;
     color: lightgray;
+    display: flex;
+    justify-content: space-between;
+}
+
+.miniCart p{
+    padding-top: 0px;
+    color: lightgray;
 }
 
 @keyframes moveMiniCart {
