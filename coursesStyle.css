@@ -231,6 +231,7 @@ h1 {
 
 .courseButtons li {
     margin: 30px;
+    margin-bottom: 50px;
     text-decoration: none;
     color: black;
     text-align: center;
@@ -260,6 +261,19 @@ h1 {
 
 .courseButtons i {
     padding-inline: 15px;
+}
+
+.courseButtons button {
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    text-transform: uppercase;
+    color: gray;
+}
+
+.courseButtons button:hover {
+    color: black;
 }
 
 /* The Footer */
