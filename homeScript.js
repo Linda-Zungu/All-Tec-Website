@@ -47,50 +47,10 @@ courseLinkNav.addEventListener("mouseout", function (){
     courseLinkNav.style.transition = "all 0.3s ease-in-out"
 })
 
-// function cartFunc() {
-//     var miniCart = document.getElementById("miniCartID");
-//     miniCart.style.animation = "moveMiniCart 0.3s ease-in-out"
-//     if(miniCart.style.transform == "translateX(0%)"){
-//         miniCart.style.transform = "translateX(150%)"
-//     }
-//     else{
-//         miniCart.style.transform = "translateX(0%)"
-//     }
-
-//     // storeItem("Hello")
-// }
-
-// function storeItem(nameOfItemFromInput) {
-//     var data = ["Hello", "World"];
-//     if(data.length == 0) {
-//         localStorage["data"] = JSON.stringify(data);
-
-        
-//     }
-//     else {
-//         var storedData = JSON.parse(localStorage["data"])
-//         console.log(storedData[1])
-    
-//         addLi(storedData[1])
-//         addLi(storedData[0])
-//     }
-
-// }
-
-// function addLi(nameOfItem) {
-//     var ul = document.getElementById("miniCartID");
-//     var li = document.createElement("li");
-//     var hr = document.createElement("hr");
-//     li.appendChild(document.createTextNode(nameOfItem));
-//     ul.appendChild(li);
-//     ul.appendChild(hr);
-    
-// }
-
-
 var value = 0;
 
-var buyButton = document.createElement("button");
+var buyButton = document.createElement("a")
+buyButton.setAttribute('href', 'payment.html')
 buyButton.appendChild(document.createTextNode("Buy"))
     
 function cartFunc() {
@@ -104,13 +64,6 @@ function cartFunc() {
         miniCart.style.transform = "translateX(0%)"
         if(items.length != 0) {
             document.getElementById("miniCartID").appendChild(buyButton);
-            buyButton.style.padding = "10px"
-            buyButton.style.paddingLeft = "30px"
-            buyButton.style.paddingRight = "30px"
-            buyButton.style.display = "table"
-            buyButton.style.margin = "0 auto"
-            buyButton.style.marginTop = "20px"
-            buyButton.style.marginBottom = "10px"
             items.forEach(i => {
                 addToTray(i, itemPrices[items.indexOf(i)]);
                 value += parseFloat(itemPrices[items.indexOf(i)].substring(1, itemPrices[items.indexOf(i)].length))
@@ -137,13 +90,6 @@ function storeText(nameID, priceID) {
         localStorage.setItem('itemPrices', JSON.stringify(itemPrices))
 
         document.getElementById("miniCartID").appendChild(buyButton);
-        buyButton.style.padding = "10px"
-        buyButton.style.paddingLeft = "30px"
-        buyButton.style.paddingRight = "30px"
-        buyButton.style.display = "table"
-        buyButton.style.margin = "0 auto"
-        buyButton.style.marginTop = "20px"
-        buyButton.style.marginBottom = "10px"
 
         document.getElementById("miniCartID").removeChild(document.getElementById("toBeRemovedID"))
         document.getElementById("miniCartID").removeChild(document.getElementById("toHR"))
