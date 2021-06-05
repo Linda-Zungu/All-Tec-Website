@@ -182,6 +182,26 @@ nav {
     padding-inline: 10px;
 }
 
+.miniCart a {
+    display: table;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    background-color: lightgray;
+    padding: 10px;
+    padding-inline: 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    font-weight: lighter;
+    font-size: small;
+}
+
+.miniCart a:hover {
+    color: white;
+    background-color: rgb(177, 177, 177);
+}
+
 @keyframes moveMiniCart {
     from {
         transform: translateX(150%);
