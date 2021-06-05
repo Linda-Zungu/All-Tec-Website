@@ -169,6 +169,7 @@ function addToTray(nameID, priceID) {
         li.id = "toBeRemovedID"
         hr.id = "toHR"
         removeLine.style.opacity = "0"
+        removeLine.disabled = true
     }
     
     removeLine.onclick = function () {
@@ -189,6 +190,7 @@ function addToTray(nameID, priceID) {
             hr.id = "toHR"
             p.innerHTML = ""
             removeLine.style.opacity = "0"
+            removeLine.disabled = true
 
             li.appendChild(document.createTextNode(" removed... Add some items"));
             ul.appendChild(li)

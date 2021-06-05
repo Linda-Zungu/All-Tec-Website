@@ -104,6 +104,7 @@ function addToTray(nameID, priceID) {
     if(p.innerHTML == ""){
         li.id = "toBeRemovedID"
         hr.id = "toHR"
+        removeLine.disabled = true
         removeLine.style.opacity = "0"
     }
     
@@ -125,6 +126,7 @@ function addToTray(nameID, priceID) {
             hr.id = "toHR"
             p.innerHTML = ""
             removeLine.style.opacity = "0"
+            removeLine.disabled = true
 
             li.appendChild(document.createTextNode(" removed... Add some items"));
             ul.appendChild(li)
