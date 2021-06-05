@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="paymentStyle.css">
+    <script src="https://kit.fontawesome.com/0f6b1a5a26.js" crossorigin="anonymous"></script>
+    <title>Payment</title>
+</head>
+<body>
+    <nav>
+        <section class="logo">
+            <a href="home.html"><img src="Logo.png" alt=""></a>
+        </section>
+        <ul class="nav-links">
+            <li><a href="about.html">About</a></li>
+            <li><a id="coursesID" class="coursesLink" href="courses.html">Courses</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <!-- Added this : copy to other pages -->
+        <button id="cartID" class="cart" onclick="cartFunc()"><i class="fas fa-shopping-bag" style="font-size: 14px;"></i></button>
+        <!-- Added this : copy to other pages -->
+    </nav>
+    <section id="courseIconID" class="courseIconLinks">
+        <ul>
+            <li><a href="htmlBuy.html"><i class="fab fa-html5" style="font-size: 20px;"></i></a></li>
+            <li><a href="cssCourse.html"><i class="fab fa-css3-alt" style="font-size: 20px;"></i></a></li>
+            <li><a href="jsCourse.html"><i class="fab fa-js-square" style="font-size: 20px;"></i></a></li>
+            <li><a href="stackCourse.html"><i class="fab fa-stack-overflow" style="font-size: 20px;"></i></a></li>
+            <li><a href="pythonCourse.html"><i class="fab fa-python" style="font-size: 20px;"></i></a></li>
+            <li><a href="javaCourse.html"><i class="fab fa-java" style="font-size: 20px;"></i></a></li>
+            <li><a href="swiftCourse.html"><i class="fab fa-swift" style="font-size: 20px;"></i></a></li>
+        </ul>
+    </section>
+
+    <!-- Added this : copy to other pages -->
+    <section> 
+        <ul id="miniCartID" class="miniCart">
+        </ul>
+    </section>
+    <!-- Added this : copy to other pages -->
+
+    <h1>Let's Pay</h1>
+
+    <form class="paymentInfo">
+        <ul>
+            <h3>About You<i class="fas fa-user"></i></h3>
+            <li>
+                <input type="text" name="firstname" id="firstname" placeholder="First Name" required autofocus>
+            </li>
+            <li>
+                <input type="text" name="lastname" id="lastname" placeholder="Last Name" required>
+            </li>
+            <li>
+                <input type="email" name="email" id="email" placeholder="Email" required>
+            </li>
+            <li>
+                <input type="tel" name="contactNumber" id="contactNumber" placeholder="Contact Number" required>
+            </li>
+            <h3>Address<i class="fas fa-home"></i></h3>
+            <li>
+                <input type="text" name="addressNumber" id="addressNumber" placeholder="Home Address Number" required>
+            </li>
+            <li>
+                <input type="text" name="streetName" id="streetName" placeholder="Street" required>
+            </li>
+            <li>
+                <input type="text" name="suburbName" id="suburbName" placeholder="Suburb" required>
+            </li>
+            <li>
+                <input type="text" name="provinceName" id="provinceName" placeholder="Province" required>
+            </li>
+            <li>
+                <input type="text" name="postalCode" id="postalCode" placeholder="Postal Code" required>
+            </li>
+            <h3>Card Details<i class="fas fa-credit-card"></i></h3>
+            <li>
+                <input type="text" name="cardNumber" id="cardNumber" placeholder="Card Number(16 characters)" required>
+            </li>
+            <li>
+                <input type="text" name="cvvNumber" id="cvvNumber" placeholder="CVV Number (3 digits)" required>
+            </li>
+            <li>
+                <button type="submit" onclick="done()">Make Payment</button>
+            </li>
+        </ul>
+        <section> 
+            <ul id="miniCartID" class="miniCart">
+            </ul>
+        </section>
+    </form>
+
+    <script src="homeScript.js"></script>
+</body>
+<footer>
+    <hr>
+    <section class="footerLinks">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </section>
+</footer>
+</html>

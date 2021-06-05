@@ -173,3 +173,36 @@ function addToTray(nameID, priceID) {
     ul.appendChild(hr);
     
 }
+
+//For Payments
+function validateEmail(email) {
+    var re = /\S+@\S+\.\S+/;
+    return re.test(email);
+}
+    
+function done() {
+    var name = document.getElementById("firstname")
+    var lastname = document.getElementById("lastname")
+    var email = document.getElementById("email")
+    var contactNumber = document.getElementById("contactNumber")
+    var addressNumber = document.getElementById("addressNumber")
+    var streetName = document.getElementById("streetName")
+    var suburbName = document.getElementById("suburbName")
+    var provinceName = document.getElementById("provinceName")
+    var postalCode = document.getElementById("postalCode")
+    var cardNumber = document.getElementById("cardNumber")
+    var cvvNumber = document.getElementById("cvvNumber")
+    
+    if(items.length != 0){
+        if(name.value.length > 0 && lastname.value.length > 0 && email.value.length > 0 && validateEmail(email.value) && contactNumber.value.length >0 && addressNumber.value.length > 0 && streetName.value.length > 0 && suburbName.value.length > 0 && provinceName.value.length > 0 && postalCode.value.length > 0 && cardNumber.value.length > 0 && cvvNumber.value.length > 0){
+            alert("Thank you for choosing us to help you with your career. We'll be in contact with you, check your emails to receive your receipt")
+            localStorage.clear();
+        }
+    }
+    else {
+        alert("Sorry, your cart is empty. To make any payment, please go to the courses tab and add all the items you wish to buy, and then return here to pay.")
+    }
+    
+    
+    
+}
