@@ -311,6 +311,75 @@ video {
     padding: 50px;
 }
 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .courseIconLinks ul {
+        width: 75%;
+    }
+
+    .miniCart {
+        width: 40%;
+        transform: translateX(150%);
+    }
+
+    .buyItemContainer {
+        display: flex;
+        justify-content: left;
+        justify-self: left;
+        flex-wrap: wrap;
+        /* width: 100%; */
+    }
+
+    .buyItemContainer img {
+        display: table;
+        margin: 0 auto;
+    }
+}
+@media screen and (min-width: 1025px) {
+    .buyItemContainer {
+        display: flex;
+        /* justify-content: left; */
+        /* justify-self: left; */
+        flex-wrap: wrap;
+        /* width: 70%; */
+    }
+    .buyItemContainer img {
+        display: table;
+        margin: 0 auto;
+        height: 100%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .courseIconLinks ul {
+        width: 100%;
+    }
+
+    .miniCart {
+        width: 100%;
+        transform: translateX(150%);
+    }
+
+    video {
+        width: 70%;
+    }
+
+    .buyItemContainer {
+        display: flex;
+        justify-content: left;
+        justify-self: left;
+        flex-wrap: wrap;
+        width: 90%;
+    }
+
+    .buyItemContainer img {
+        display: table;
+        margin: 0 auto;
+        height: 100%;
+    }
+
+    .text {
+        padding-right: 100px;
+    }
+}
 
 /* The Footer */
 footer {

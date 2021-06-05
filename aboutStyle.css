@@ -242,6 +242,27 @@ nav {
     color: white;
 }
 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .courseIconLinks ul {
+        width: 75%;
+    }
+
+    .miniCart {
+        width: 40%;
+        transform: translateX(150%);
+    }
+}
+@media screen and (max-width: 768px) {
+    .courseIconLinks ul {
+        width: 100%;
+    }
+
+    .miniCart {
+        width: 100%;
+        transform: translateX(150%);
+    }
+}
+
 /* The Footer */
 hr {
     display: table;
