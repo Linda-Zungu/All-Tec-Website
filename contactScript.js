@@ -159,6 +159,18 @@ function addToTray(nameID, priceID) {
     li.appendChild(document.createTextNode(nameID));
     p.appendChild(document.createTextNode(priceID));
     removeLine.appendChild(document.createTextNode("X"));
+    removeLine.onclick = function () {
+        for(i = 0; i < itemPrices.length; i++){
+            if(itemPrices[i] == p.innerHTML){
+                itemPrices.splice(i, 1)
+                items.splice(i, 1);
+                ul.removeChild(li)
+                ul.removeChild(hr)
+            }
+        }
+        localStorage.setItem('itemPrices', JSON.stringify(itemPrices));
+        localStorage.setItem('items', JSON.stringify(items));
+    }
     
     ul.appendChild(li);
     li.appendChild(p)
