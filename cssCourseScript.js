@@ -60,6 +60,9 @@ function storeText(nameID, priceID) {
         itemPrices.push(document.getElementById(priceID).innerHTML)
         localStorage.setItem('itemPrices', JSON.stringify(itemPrices))
 
+        document.getElementById("miniCartID").removeChild(document.getElementById("toBeRemovedID"))
+        document.getElementById("miniCartID").removeChild(document.getElementById("toHR"))
+
         addToTray(items[items.length-1], itemPrices[itemPrices.length-1])
     }
     else{
@@ -97,6 +100,13 @@ function addToTray(nameID, priceID) {
     li.appendChild(document.createTextNode(nameID));
     p.appendChild(document.createTextNode(priceID));
     removeLine.appendChild(document.createTextNode("X"));
+
+    if(p.innerHTML == ""){
+        li.id = "toBeRemovedID"
+        hr.id = "toHR"
+        removeLine.style.opacity = "0"
+    }
+    
     removeLine.onclick = function () {
         for(i = 0; i < itemPrices.length; i++){
             if(itemPrices[i] == p.innerHTML){
@@ -108,7 +118,21 @@ function addToTray(nameID, priceID) {
         }
         localStorage.setItem('itemPrices', JSON.stringify(itemPrices));
         localStorage.setItem('items', JSON.stringify(items));
+        if(items.length == 0){
+            console.log(li)
+            console.log(hr)
+            li.id = "toBeRemovedID"
+            hr.id = "toHR"
+            p.innerHTML = ""
+            removeLine.style.opacity = "0"
+
+            li.appendChild(document.createTextNode(" removed... Add some items"));
+            ul.appendChild(li)
+            li.appendChild(p)
+            ul.appendChild(hr)
+        }
     }
+    
     ul.appendChild(li);
     li.appendChild(p)
     ul.appendChild(hr);
