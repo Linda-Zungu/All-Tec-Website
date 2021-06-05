@@ -178,6 +178,12 @@ nav {
     justify-content: space-between;
 }
 
+.miniCart button {
+    border: none;
+    border-radius: 4px;
+    padding-inline: 10px;
+}
+
 .miniCart hr {
     display: table;
     margin: 0 auto;
