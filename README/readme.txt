@@ -7,8 +7,16 @@ The website is designed with a unique minimal design to make information pop, th
 
 - The cart on the top right is your doorway to the payment page. 
     - You can only access that page once the cart has items added to it.
-    - The cart is intelligent enough to see if an item is added then can let the user pay for the items. 
+    - The cart is intelligent enough to see if an item is added then can let the user pay for the items.
     - If the all the items are removed, the cart will recognize that, and not let the user go to the payment because it is unnecessary since there won't be any items to pay for.
+
+THE NAVIGATION BAR
+- This includes:
+  - Home (In a form of the logo on the top left corner)
+  - About
+  - Courses
+  - Contact
+  - Cart
 
 
 THE COURSES TAB
